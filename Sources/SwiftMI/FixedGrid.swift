@@ -41,8 +41,8 @@ public struct BottomNavigationCompactStyle: ViewModifier {
     public func body(content: Content) -> some View {
         content
             .font(.title2.weight(.light))
-            .padding(.top, 8)
-            .padding(.bottom, 4)
+            .padding(.top, 10)
+            .padding(.bottom, 6)
             .padding(.horizontal)
             .tint(.white.opacity(0.8))
             .background(.black)
