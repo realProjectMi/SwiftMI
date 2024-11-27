@@ -27,25 +27,3 @@ public struct FixedGrid<Content: View>: View {
         LazyVGrid(columns: columns, spacing: gap[1], content: content)
     }
 }
-
-// MARK: - FixedGrid Styles (custom modifiers)
-public extension View {
-    
-    /// Turn a single row of FixedGrid into a bottom navigation bar.
-    func bottomNavigationCompactStyle() -> some View {
-        modifier(BottomNavigationCompactStyle())
-    }
-}
-
-public struct BottomNavigationCompactStyle: ViewModifier {
-    public func body(content: Content) -> some View {
-        content
-            .font(.title2.weight(.light))
-            .padding(.top, 10)
-            .padding(.bottom, 6)
-            .padding(.horizontal)
-            .tint(.white.opacity(0.8))
-            .background(.black)
-            .frame(maxHeight: .infinity, alignment: .bottom)
-    }
-}
